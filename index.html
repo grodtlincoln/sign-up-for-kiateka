@@ -5,131 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <script src="https://cdn.tailwindcss.com"></script>
-    <title>Vite + React + TS</title>
+    <title>sign up</title>
   </head>
 
        
   <body>
 
-     <div class="flex items-center justify-center min-h-screen bg-gray-100">
-      <div
-        class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0"
-      >
-        
-              <!-- {/* right side */} -->
-        <div class="relative p-6">
-          <img
-            src="SIGN.png"
-            alt="img"
-            class="w-[400px] h-full hidden md:block object-cover"
-          />
-        </div>
-      
-      
-      
-      <!-- right side -->
-        <div class="flex flex-col justify-center p-8 md:p-14">
-          <span class="mb-3 text-4xl font-bold">Community Leads Login</span>
-          <span class="font-bold text-gray-400 mb-8">
-            Welcome back!
-          </span>
-
-          <div class="py-4">
-            <input
-              type="Email"
-              placeholder="Community Email Address"
-               class="w-full p-2 pl-10 border border-gray-300 rounded-md placeholder:font-semibold 
-                      placeholder:text-gray-400 bg-[url('/email.png')] bg-no-repeat bg-[left_0.75rem_center]
-                       bg-[length:1rem_1rem]"
-              name="email"
-              id="email"
-            /> 
-          </div>
-
-
-          <div class="relative py-4">
-            <input
-              type="password"
-              placeholder="Enter Password"
-              name="pass"
-              id="passwordInput"
-              class="w-full p-2 pl-10 border border-gray-300 rounded-md placeholder:font-semibold 
-                     placeholder:text-gray-400 bg-[url('/padlock.png')] bg-no-repeat bg-[left_0.75rem_center] 
-                     bg-[length:1rem_1rem]"/>
-
-      <!-- toggle button with icons-->
-    <button
-    type="button"
-    id="togglePassword"
-    class="absolute right-3 top-1/2 transform -translate-y-1/2">
-
-    <!-- Eye Open Icon (initially hidden) -->
-    <img
-      src="/eye-open.png"
-      alt="Show Password"
-      id="eyeOpenIcon"
-      class="w-7 h-5 hidden"
-    />
-    <!-- Eye Closed Icon (visible initially) -->
-    <img
-      src="/eye-close.png"
-      alt="Hide Password"
-      id="eyeClosedIcon"
-      class="w-7 h-5 block"
-    />
-  </button>
-    </div>
-
-
-          <div class="flex justify-between w-full py-4">
-            <div class="mr-24">
-              <input type="checkbox" name="ch" id="ch" class="mr-2" />
-              <span class="text-semibold">Remember for 30 days</span>
-            </div>
-            <span class="font-semibold text-md text-green-900 underline">Forgot password?</span>
-          </div>
-
-
-          <button
-            class="w-full bg-green-700 text-white p-2 rounded-lg mb-6 hover:bg-black
-                    hover:text-white hover:border hover:border-gray-300">
-            Log in
-          </button>
-          <button
-            class="w-full border border-gray-300 text-md p-2 rounded-lg mb-6 hover:bg-black hover:text-white"
-          >
-            <img src="google.svg" alt="img" class="w-6 h-6 inline mr-2" />
-            Sign in with Google
-          </button>
-          <div class="text-center text-gray-400 font-semibold">
-            Dont'have an account?
-            <span class="font-bold text-green-900">Create an account</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-
-<script>
-  const passwordInput = document.getElementById("passwordInput");
-  const togglePassword = document.getElementById("togglePassword");
-  const eyeOpenIcon = document.getElementById("eyeOpenIcon");
-  const eyeClosedIcon = document.getElementById("eyeClosedIcon");
-
-  togglePassword.addEventListener("click", () => {
-    const isPasswordHidden = passwordInput.type === "password";
-
-    // Toggle input type
-    passwordInput.type = isPasswordHidden ? "text" : "password";
-
-    // Toggle icons
-    eyeOpenIcon.classList.toggle("hidden", !isPasswordHidden);
-    eyeClosedIcon.classList.toggle("hidden", isPasswordHidden);
-  });
-</script>
 
 </html>

@@ -24,9 +24,9 @@ const Login: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
-      <form
+      <form 
         onSubmit={handleSubmit}
-        className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md"
+        className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md p-6 sm:p-8 md:p-10 w-full max-w-md"
       >
         <h2 className="text-3xl font-bold mb-4">Community Leads Login</h2>
         <p className="text-gray-500 mb-6">Welcome back!</p>
@@ -37,7 +37,9 @@ const Login: React.FC = () => {
           <input
             type="email"
             placeholder="Community Email Address"
-            className="w-full p-2 pl-10 border border-gray-300 rounded-md bg-[url('/email.png')] bg-no-repeat bg-[left_0.75rem_center] bg-[length:1rem_1rem] placeholder:text-gray-400 placeholder:font-semibold"
+            className="w-full p-2 pl-10 border border-gray-300 rounded-md 
+                       bg-[url('/email.png')] bg-no-repeat bg-[left_0.75rem_center] 
+                       bg-[length:1rem_1rem] placeholder:text-gray-400 placeholder:font-semibold"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -47,7 +49,9 @@ const Login: React.FC = () => {
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Enter Password"
-            className="w-full p-2 pl-10 pr-10 border border-gray-300 rounded-md bg-[url('/padlock.png')] bg-no-repeat bg-[left_0.75rem_center] bg-[length:1rem_1rem] placeholder:text-gray-400 placeholder:font-semibold"
+            className="w-full p-2 pl-10 pr-10 border border-gray-300 rounded-md 
+                       bg-[url('/padlock.png')] bg-no-repeat bg-[left_0.75rem_center] 
+                       bg-[length:1rem_1rem] placeholder:text-gray-400 placeholder:font-semibold"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -59,7 +63,7 @@ const Login: React.FC = () => {
             <img
               src={showPassword ? "/eye-open.png" : "/eye-close.png"}
               alt="toggle visibility"
-              className="w-5 h-5"
+              className="w-7 h-5"
             />
           </button>
         </div>
